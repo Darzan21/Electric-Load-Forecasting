@@ -72,13 +72,13 @@ As we noted earlier, we usually find Time-Series data in numerous areas like eco
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\linewidth]{project/fd.PNG}
-\label{fig:felix}
+
 \caption{Weekly BP/USD exchange rate series (1980-1993)}
 \end{figure}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\linewidth]{project/fd1.PNG}
-\label{fig:felix}
+
 \caption{Monthly internation airline passenger series (Jan 1949-Dec 1960)}
 \end{figure} The first Time-Series plot originates from the paper \cite{zhang2003time} and presents the weekly exchange rate between the US dollar (\$) and the GBP (\pounds) for the specified time between 1980 and 1933. The second plot presents seasonal Time-Series data and show on monthly basis, the number of worldwide airline passengers between January 1949 and December 1960 as examined in paper \cite{adhikari2013introductory}.
 \textbf{Time-Series Analysis} is the procedure of fitting an appropriate Time-Series model on known data and estimating the relevant model's parameters. In Time-Series analysis, we gather past observations in order to construct an appropriate mathematical model that captures in the best way data patterns and their nature. Afterwards, the constructed model is used to predict the Time-Series' future values, which is a crucial procedure because business decisions and precautionary measures are obtained based on these forecasts .
@@ -117,13 +117,13 @@ Last but not least, when including in our model external input variables, like t
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\linewidth]{project/ARIMAX.png}
-\label{fig:felix}
+
 \end{figure}
 \newline where x(t) is the external variable in time t and
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\linewidth]{project/w.png}
-\label{fig:felix}
+
 \end{figure}
 When the ARIMA model contains seasonal variations and we have to include external variables in our model, then this variation is called SARIMAX. SARIMAX is essentially used in case the Time Series under study,  appears also seasonality except the trend. So in that case, the seasonal parameters are also included in the model and thus defining the Seasonal AutoRegressive Integrated Moving Average with eXogenous factor (SARIMAX (p, d, q)(P, D, Q, m)) \cite{tarsitano2017short}. \par Stohastic time-series modeling present numerous attractive features. The theory behind these models is well known, thus it's relatively easy to understand the forecasting procedure and its implementation. The model's parameters are relatively easy to tuned and moreover, the estimation of the white noise difference, creates a sense of confidence in the model's predictions. Furthermore, it is possible to establish diagnostic methods and the assessment of the model's parameters is clear. Forecasting time-series models containing exogenous variables, have been used for prediction in a vast variety of applications. Exogenous variables are also referred as covariates, which are considered as parallel input sequences referring to observations 
 which follow the same time sequence as the actual time-series data. The actual time-series data may be referred to as endogenous sequence in contrary to the exogenous data sequence. Exogenous variables observations are incorporated directly in the model at each time step, although there are not configured in the same way as the primary endogenous sequence (e.g. as model AR, MA, etc.).
@@ -156,7 +156,7 @@ Furthermore, the authors claim that, even with the default settings, in many cas
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\linewidth]{project/prophet.PNG}
-\label{fig:felix}
+
 \caption{Automated forecasting process with analyst-in-the-loop}
 \end{figure}
 Prophet has been oftenly used as the main forecasting algorithm in numerous case studies based on the following two benefits:
@@ -188,18 +188,18 @@ Concerning the term e(t), it is a function which affects our result according to
 \section{Basic Concepts of Neural Networks}
 By default, the main characteristic of neural networks is their ability to learn. In layman’s terms, when a neural network is learning it improves its ability to solve a problem through a repetitive process of gradually adjusting the neuron weights to the appropriate values that achieve the solution to the problem. Consecutively, by the end of the training step these parameters will get a fixed value. The challenging part is to achieve generalization \cite{liu2018r}. Generalization is the phenomenon where the neural network is general enough to be able to give appropriate outputs for inputs other than those it was trained for. Furthermore, neural networks provide another way of finding non-linear hypotheses since they decide to include ordered terms that best fit the data.
 Neural networks emulate the way the brain works and its learning procedure. In correspondence to a human’s brain, the neuron is the basic building block and it consists of the axon, the dendrites and the synapses. The axon is the neuron exit gate and sends signals to other neurons, the dendrites are the neuron entry gates, and the synapses are the points of union between the neuron and the other neurons' dendrites. Neuron studying and the mathematical modeling of their structure led to artificial Neural Networks. The McCulloch-Pitts model as seen in the following figure \cite{chakrabortyoptimized}, is a simple model for describing the neuron.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.6\linewidth]{project/Pitts.png}
-\label{fig:felix}
+
 \caption{The McCulloch-Pitts Neuron model}
 \end{figure}
 \par As seen above, $I_1, I_2, I_3 ...I_N$ are the neuron inputs and $w_1, w_2, w_3...w_N$ are called synaptic weights. If the sum of the products $I_i*W_i$ is greater than the T threshold, then the neuron passes the sum into the output y, otherwise it remains inactive. 
 In an effort to accurately simulate the brain’s functionality, “Artificial Neurons” are a simplified version of the biological ones. The inputs are represented by $x_{i}$. Each input is multiplied by some weight $w_{i}$, and all $w{i}*x{i}$ products are added. Following this step, the processed input is fed into an “activation function” which creates the output value, called “activation” value. Finally, there is an output path. There is a number of Neural Networks architectures that are characterized by the differences in their activation functions. The most common one is the Sigmoid activation function $f(u)=1/(1+ \epsilon^{-u})$. More specifically, the activation function can be step transfer function, a linear transfer function, a non-linear transfer function or a stochastic transfer function. These artificial neurons can be connected in many ways to give “artificial neural networks”. The way that the network is structured is referred to as the network’s architecture. A network can be divided into different layers where the first and last one of them are called input and output layers, respectively. The layers in between are referred to as hidden layers and their number can arbitrarily large or small. It is important to point out though that layers only pass values forward and not backwards. Adding layers to the network increases its depth, as well as its accuracy. In such a network, there is one input layer, one or more hidden layers, and one output layer, as shown in the below figure \cite{liu2018r}. The layers in between are called hidden layers because they are hidden from the user.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.8\linewidth]{project/testw.JPG}
-\label{fig:felix}
+
 \caption{Artificial Neural Network's Architecture}
 \end{figure}
 \par Usually in a neural network, each node in the previous layer is connected to every node in the following layer. Those created paths carry weights that the signal must be multiplied by when moving from one node to the other. This product is what reaches the end node. Each node receives several of these products from the nodes in the previous layer that connect to it. It sums them all up, applies the logistic function and passes the output forward to the next layer where the process repeats. Neural networks learning ability results from the tuning of the weights for each path so that the output layer produces a hypothesis that can model your data. In this way, complex non-linear hypotheses can be formed and the more hidden layers you have the potentially more complex models can be generated. 
@@ -211,30 +211,30 @@ In an effort to accurately simulate the brain’s functionality, “Artificial N
     \item Learning algorithm.
 \end{itemize}
 \par In the same way as every machine or deep learning algorithm, neural networks have to be trained on a dataset before they can be used to predict an output. Usually, the dataset consists of pairs of input-output. As a first step during training, all weights are randomly initialized and then the inputs are forward fed through the network to finally produce the output (“forward pass”) \cite{nicholson2019beginner}. Of course, the output of every node in each hidden layer takes into consideration the activation function for the calculations. The arbitrary weight initialization is bound to result in inaccurate outputs and thus the goal is to calculate the weight values that can successfully predict them with reasonable accuracy. The algorithm used to do this is known as “Backpropagation”. After the forward pass, we have some activations at the output layer.  An ideal neural network will result in outputs that are equal to the intended targets (known outputs). In practice this is not always the case and especially when the weights are randomly initialized. To account for that fact, the error is calculated using the “cost function” and then it is “backpropagated” through the network. As mentioned earlier, the goal is to adapt the weights so that the solution to the optimization problem of minimizing the cost function through “gradient descent” is acceptable. The plot of cost function vs weight is more or less convex and looks something like the following figure \cite{cost}.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.6\linewidth]{project/convex.PNG}
-\label{fig:felix}
+
 \caption{Cost function and Gradient Descent}
 \end{figure}
 Gradient descent operates under the assumption that we make small steps towards the global minimum of the gradient when the plot is convex. In case the plot is not completely convex, we consider that the local minima are a good approximation of the global one. So we make small updates on the weights by multiplying them with the “learning rate” parameter, each time moving them in the direction of the gradient. Neural networks are highly sophisticated non-linear modeling techniques, capable of modeling extremely complex functions \cite{dilhani2017effect}. Keeping that in mind, they still fail to model complex phenomena where the popular linear models and their well-known optimization strategies are also straggling to show valid results. Of course, the problem on these types of networks is located on the dimensionality of the inputs and the outputs which could be an issue for large number of variables.
 \par As a matter of fact, the manner in which the neurons of a neural network are structured is intimately linked with the learning algorithm used to train the network. For instance, in \textbf{Feedforward Neural Networks} the information flow is strictly moving from the input layer to the output. In addition, in the \textbf{Single Layer Feedforward Networks} example the term “single” refers to the output nodes where the inputs are fed directly via a number of weights.
 More specifically, the feedforward network architecture utilizes a supervised learning approach to solve the issue of teaching it to perform well for a problem. Therefore, the inputs are fed into the network to produce the outputs through a pattern recognition process that indicates an input image of a “cat” or “elephant”, for example. As mentioned earlier, the goal is to train the network until it has the minimum category guessing error. With the trained set of parameters (or weights, collectively known as a model), the network sallies forth to categorize data it has never seen. An interesting advantage of this network architecture is the lack of time order perception. To be more precise, a trained feedforward network evaluates only the current input example and it will not assume that the next output is somehow dependent on the one under evaluation. A simple example is that seeing a photograph of a cat will not lead the network to perceive an elephant next \cite{grus2019data}.
 \par A \textbf{Multilayer Feedforward Neural Network} is architected with a number of hidden units-neurons that formulate its hidden layers. The term “hidden” is used just because they do not have an immediate connection with the input or output layers and their main functionality is to help transform the input into the output in a more elaborate-meaningful kind of way \cite{gupta2018fundamentals}. By adding one or more hidden layers, the network is enabled to extract higher-order statistics from its input. Finally, another special Neural Network architecture is the \textbf{Recurrent Neural Networks (RNN's)}.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.8\linewidth]{project/rnn.png}
 \caption{Unfolded basic Recurrent Neural Network}
-\label{fig:felix}
+
 \end{figure}
 A recurrent neural network differs by having at least one feedback. Feedforward networks are amnesiacs regarding their recent past. There are no self-feedback loops in the network. The feedback loops involve the use of particular branches composed of unit-time delay elements, which result in a nonlinear dynamic behavior as shown in the figure below \cite{gupta2018fundamentals}.
 \section{Long Short-Term Memory Units (LSTMs)}
 Recurrent networks, in a sense, use a combination of inputs since they not only take into account the current ones but also the ones fed immediately before into the network. As a matter of fact, the decision a recurrent neural network reached at time step t-1 affects the decision it will reach one moment later at time step t. This is a distinguishable characteristic that separates recurrent from feedforward networks, a perception of “memory” as seen on figure 7.5 \cite{olah2015understanding}. \textbf{Adding memory to neural networks has a purpose: There is information in the sequence itself, and recurrent networks use it to perform tasks that feedforward networks can’t.}
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.7\linewidth]{project/rnn2.png}
 \caption{Recurrent Neural Network loop}
-\label{fig:felix}
+
 \end{figure}
 That sequential information is preserved in the recurrent network’s hidden state, which manages to span many time steps as it cascades forward to affect the processing of each new example. It recognizes correlations between events separated by many moments, and these correlations are called “long-term dependencies”, because an event downstream in time depends upon, and is a function of, one or more events that came before. 
 \par RNNs can be considered as a mechanism to share weights over time. The information travel in the hidden states of the recurrent networks and the phenomenon can be described mathematically as follows. The hidden state at time step t is $h_{t}$. It is a function of the input at the same time step $x_{t}$, modified by a weight matrix W (like the one we used for feedforward neural networks) added to the hidden state of the previous time step $h_{t-1}$ multiplied by its own hidden-state-to-hidden-state matrix U, otherwise known as a transition matrix and similar to a Markov chain. The weight matrices are filters that determine how much importance to accord to both the present input and the past hidden state. The error they generate will return via backpropagation and be used to adjust their weights until error can’t go any lower. The sum of the weight input and hidden state is squashed by the function $\phi$ – either a logistic sigmoid function or tanh, depending – which is a standard tool for condensing very large or very small values into a logistic space, as well as making gradients workable for backpropagation \cite{palchak2013artificial}.
@@ -243,10 +243,10 @@ Because this feedback loop occurs at every time step in the series, each hidden 
 \par The aforementioned phenomenon of short memory for RNNs is the result of the problem of Vanishing Gradient that also affects feedforward neural networks. This term is used to describe the fact that the gradient almost vanishes due to the small values of the activation functions derivatives that get multiplied multiple times as we move towards the starting layers. RNN remembers things for just small durations of time, i.e. if we need the information after a small time it may be reproducible, but once a lot of words are fed in, this information gets lost somewhere. 
 In theory, RNNs are absolutely capable of handling such “long-term dependencies.” In practice, on the other hand, extensive research and literature suggests that this is not the case.
 \par To solve this problem, a special family of RNNs was created and is called Long Short Term Memory networks or LSTMs. LSTMs are explicitly designed to avoid the long-term dependency problem. Remembering information for long periods of time is practically their default behavior, not something they struggle to learn. RNNs network architecture resembles a chain of repeating modules that are comprised of a simple structure. LSTMs build on that simple structure and instead of having just one neural network layer, they have four mingling in a particular way. The key to LSTMs is the cell state, the horizontal line running through the top of the diagram 7.6  \cite{olah2015understanding}. The cell state is kind of like a conveyor belt. LSTMs use this mechanism to move information around. We may have some addition, modification or removal of information as it flows through the different layers.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.7\linewidth]{project/lstm.png}
-\label{fig:felix}
+
 \caption{Inner structure of an LSTM unit}
 \end{figure}
 It runs straight down the entire chain, with only some minor linear interactions. LSTMs use gate structures to manipulate the information on the cell state. Even though information can run through unchanged, it can also be enriched or simplified this way. In general, gates are a way to optionally let information through. They are composed out of a sigmoid neural net layer and a pointwise multiplication operation. The sigmoid layer outputs numbers between zero and one, describing how much of each component should be let through. This way, LSTMs can selectively remember or forget things. The information at a particular cell state has three different dependencies.
@@ -257,10 +257,10 @@ These dependencies can be generalized to any problem as:
     \item The input at the current time step (i.e. the new information that is being fed in at that moment)
 \end{itemize}
 \par Now let’s get into the details of the architecture of LSTM network as seen in the following figure \cite{olah2015understanding}:
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{project/archi.png}
-\label{fig:felix}
+
 \caption{LSTM Network Architecture}
 \end{figure}
  A typical LSTM network is comprised of different memory blocks called cells (the rectangles that we see in the image).  There are two states that are being transferred to the next cell; the cell state and the hidden state. The memory blocks are responsible for remembering things and manipulations to this memory is done through three major mechanisms, called gates.
@@ -290,10 +290,10 @@ The job of selecting useful information from the current cell state and showing 
     \item Multiplying the value of this regulatory filter to the vector created in step 1, and sending it out as a output and also to the hidden state of the next cell.
 \end{enumerate}
 \par LSTMs contain information outside the normal flow of the recurrent network in a gated cell. Information can be stored in, written to, or read from a cell, much like data in a computer’s memory \cite{franccois2017deep}. The cell makes decisions about what to store, and when to allow reads, writes and erasures, via gates that open and close. Unlike the digital storage on computers, however, these gates are analog, implemented with element-wise multiplication by sigmoids, which are all in the range of 0-1. Analog has the advantage over digital of being differentiable, and therefore suitable for backpropagation. Those gates act on the signals they receive, and similar to the neural network’s nodes, they block or pass on information based on its strength and import, which they filter with their own sets of weights. Those weights, like the weights that modulate input and hidden states, are adjusted via the recurrent networks learning process. That is, the cells learn when to allow data to enter, leave or be deleted through the iterative process of making guesses, backpropagating error, and adjusting weights via gradient descent. The figure below \cite{nicholson2019beginner} illustrates how data flows through a memory cell and is controlled by its gates.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.6\linewidth]{project/a.png}
-\label{fig:felix}
+
 \caption{Data flow inside LSTM memory cell}
 \end{figure}
 \par Starting from the bottom, the triple arrows show where information flows into the cell at multiple points. That combination of present input and past cell state is fed not only to the cell itself, but also to each of its three gates, which will decide how the input will be handled. The black dots are the gates themselves, which determine respectively whether to let new input in, erase the present cell state, and/or let that state impact the network’s output at the present time step \cite{kyriakides2007short}. $S_{c}$ is the current state of the memory cell, and $gy^{in}$ is the current input to it. Remember that each gate can be open or shut, and they will recombine their open and shut states at each step. The cell can forget its state, or not; be written to, or not; and be read from, or not, at each time step, and those flows are represented here. The large bold letters give us the result of each operation. It’s important to note that LSTMs’ memory cells give different roles to addition and multiplication in the transformation of input. The central plus sign in both diagrams is essentially the secret of LSTMs. Simple as it may seem, this basic change helps them preserve a constant error when it must be backpropagated at depth. Instead of determining the subsequent cell state by multiplying its current state with new input, they add the two, and that quite literally makes the difference. (The forget gate still relies on multiplication, of course.) Different sets of weights filter the input for input, output and forgetting. The forget gate is represented as a linear identity function, because if the gate is open, the current state of the memory cell is simply multiplied by one, to propagate forward one more time step.
@@ -312,7 +312,7 @@ The basic concept is that by training each tree on random samples, even though e
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{project/rf.png}
-\label{fig:felix}
+
 \caption{Random Forest Structure}
 \end{figure}
 \par A good machine learning model's property, is the ability to generalize adequately to data that it has never seen before.
@@ -390,21 +390,21 @@ the individual trees, as seen in the following figure \cite{xu2019water}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\linewidth]{project/rf2.PNG}
-\label{fig:felix}
+
 \caption{Random Forest Regression Algorithm}
 \end{figure}
 \newpage
 A decision tree is a hierarchical analysis diagram where each internal (split) node represents a test function on one independent variable, each branch represents the test outcome and each terminal (leaf) node represents a decision. Specifically, at each internal node, the algorithm searches the values of the incoming dataset and recognizes a threshold for one predictor variable to split the dataset such that the homogeneity of dependent variable values in each branch is maximized. In the RFR, each decision tree is trained using a subset of data randomly sampled with replacement from the original training dataset, which can increase the robustness against overfitting. In order to inject an additional layer of randomness, instead of using all variables, only a subset of randomly selected variables are considered to form the split nodes of each tree. The reason to add this randomness is to reduce the redundancy of predictor variables while increasing the diversity of the individual trees in a forest \cite{breiman2001random}. The final result of RFR is decided by aggregating predictions of each individual tree. The RFR algorithm has four steps described as follows:
-\begin{enumerate}
-    \item Use the bootstrap method to produce $n_{tree}$ subset samples from the original training dataset,
-where $n_{tree}$ is the number of trees to grow.
-    \item Grow regression trees on each bootstrap sample, during which, randomly draw a subset
-containing $m_{try}$ predictor variables at each splitting node and determine the optimal split based
-on this subset of variables only. This process is conducted recursively until a stopping criterion
-(nodesize) is reached.
-    \item Obtain regression predictions over $n_{tree}$ decision trees. For each individual tree, the prediction is the mean of the response variable's values at the corresponding leaf nodes.
-    \item Compute the final prediction by averaging ntree predictions in the forest.
-\end{enumerate}
+%\begin{enumerate}
+%    \item Use the bootstrap method to produce $n_{tree}$ subset samples from the original training dataset,
+%where $n_{tree}$ is the number of trees to grow.
+%    \item Grow regression trees on each bootstrap sample, during which, randomly draw a subset
+%containing $m_{try}$ predictor variables at each splitting node and determine the optimal split based
+%on this subset of variables only. This process is conducted recursively until a stopping criterion
+%(nodesize) is reached.
+%    \item Obtain regression predictions over $n_{tree}$ decision trees. For each individual tree, the prediction is the mean of the response variable's values at the corresponding leaf nodes.
+%    \item Compute the final prediction by averaging ntree predictions in the forest.
+%\end{enumerate}
 In the field of machine learning, a hyperparameter is a parameter whose value is tuned either to
 improve model performance or to decrease the time and memory cost of running. The model
 performance is the only aspect considered in this paper. The three main hyperparameters in RFR that
@@ -464,7 +464,7 @@ The utilization of Leaf-wise splits, increases model complexity and raise the ri
 \centering
 \includegraphics[width=0.75\linewidth]{project/LightGBM.PNG}
 \caption{ Splitting data: Leaf-wise VS Level-wise}
-\label{fig:felix}
+
 \end{figure}
 
 
@@ -601,7 +601,7 @@ The dataset concerning the actual electricity load demand in Greece, can be foun
     \item \textbf{TEL\_MV:} The load demand for Medium Voltage that uses telemetry.
     \item \textbf{Total:} The actual load demand in total for the whole Electricity Greek network grid.
 \end{itemize}
-\begin{table}[h!]
+\begin{table}[ht!]
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
@@ -629,7 +629,7 @@ OoEM (LAGIE in Greek) stands for Operator of Electricity Market in Greece and is
     \item \textbf{[1...24]:} 24 columns each one of them indicating the hour of the day and containing the forecasted IPTO's load demand value, \textbf{for the whole Electricity Greek network grid}.
 \end{itemize}
 
-\begin{table}[h!]
+\begin{table}[ht!]
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
@@ -652,7 +652,7 @@ As we will see later, load forecasting presents Hourly but also Weekly seasonali
 \section{Preprocessing \& Feature Engineering}
 After fetching all the datasets, one vital step in any forecasting task is the preprocessing of the available data. First of all, we have to join the datasets in order to create one dataframe object containing only the appropriate columns. After doing some unpivoting to the dataset containing the OoEM's daily forecast in order to create the Hour column -instead of having 24 columns in the dataset-, the common fields among all the datasets are the Date and Hour. So an inner join in the common field which is ”date - hour” was performed in order to join the two datasets. By looking at the IPTO's dataset which contains the actual load demand data, we do not observe a column for the Low Voltage load because it is not possible to be accurately measured by IPTO, although the energy suppliers are obligated in a daily basis to declare forecast for next days Low Voltage load demand. Thus, the aim of this thesis is to develop a model for forecasting the load demand for Low Voltage, that the energy provider's analysts could use, as-is for daily Low Voltage load declaration. So to sum up, we will focus on Low Voltage load forecasting. 
 \par As we underlined earlier there is no column for Low Voltage load demand on the dataset, but based on the experts guidance, we can estimate it by calculating the difference of the dataset's columns Network and TEL MV. The Network column's load demand values, represent the load demand for Low Voltage and Medium Voltage, whereas TEL MV column contains the load demand for Medium Voltage that uses telemetry (almost all Medium Voltage meters in Greece use telemetry measurement system), thus the difference is the actual load demand for Low Voltage stored in the column LV, which is the column of interest that we want to forecast. In order to have a metric to evaluate our model concerning the Low Voltage demand, we are going to compare our forecasts with the daily forecasts provided by OoEM. Although, the OoEM publishes on a daily basis the next day's load demand forecast for the whole Greek electricity grid. To get an accurate forecast for the Low Voltage we will use the following approach. After creating the column with the actual values of the LV load demand value, we calculate the percentage of load demand corresponding to the daily LV curve (Low Voltage demand), in comparison to the total load demand for that day. The actual values of load demand curves are not known a-priori and are made available only one month after the time of occurence, or in other words after the refinement of measurements has been made by IPTO. After calculating that percentage, we will apply it to the total load demand forecast given by OoEM in order to be able to make a good approach, of what would be the forecast of the OoEM's model if OoEM knew a-priori the exact proportion of LV load demand and forecasted specifically the Low Voltage load demand and not the total networks load demand. So that is the metric that we will use to compare our model's accuracy to OoEM's model accuracy for Low Voltage load demand. The datasets structure in it's premature form, after the joins, the feature engineering and keeping the columns of interest concerning only the Low Voltage load demand is shown in the following figure.
-\begin{table}[h!]
+\begin{table}[ht!]
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -682,7 +682,7 @@ After fetching all the datasets, one vital step in any forecasting task is the p
     \item \%LVofTotal: This is our response variable, and denotes the percentage of OoEM's total load forecast that concerns Low Voltage. 
 \end{itemize}
 
-\begin{table}[h!]
+\begin{table}[ht!]
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
 \textbf{Timestamp}               & \textbf{Weekday} & \textbf{Holiday} & \textbf{ForecastTotalLoad} & \textbf{Month} & \textbf{Year} & \textbf{Hour} & \textbf{\%LVofTotal} \\ \hline
@@ -702,11 +702,11 @@ After fetching all the datasets, one vital step in any forecasting task is the p
 \end{table}
 
 \par Load demand declaration for Low Voltage is a daily procedure for energy analysts. As we mentioned earlier, the actual values of Load demand are made available, one month after the time of occurence, or in other words after the refinement of measurements has been made. Although energy analysts need information right now in order to be able to provide a decent forecast for the next day's Low Voltage load demand. The proposed mechanism for fetching Low Voltage load demand data, before its time is based on historical data and we calculated the \%LVofTotal which is our response variable. Every day based on OoEM's fairly accurate forecast we will estimate the percentage of LV in contrary with the daily OoEM's total load forecast. As we mentioned earlier, to do that we used the LightGBM algorithm and we calculated the LV percentage of OoEM's total load forecast,  for the 24 hours we want to predict. In other words, we obtained 24 percentages and then we multiplied these percentages to the OoEM's hourly total network's load forecast, thus getting 24 predictions as if OoEM had predicted the LV load demand specifically. In the following picture, we provide a graph that shows the actual LV load demand for the day 15/9/2019 - which was made available to us at around middle of October- versus the results obtained from the procedure described above, e.g the adjustment of daily OoEM's total load forecast to Low Voltage. In other words, the blue line(ActualLVLoad) shows the actual LV load demand value for that day (which is an unknown and we were able to calculate it only after the data made available with approximately one month lag) versus the OoEM's Low Voltage Adjusted forecast, which calculated as the proportion of LV that we forecasted multiplied with the OoEM's hourly forecast appropriately. In the figure below We can clearly see that we are fairly close to the actual LV load demand and we quantified the deviation at 131.3 KWh, using the RMSE error.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{project/loadadjustment.pdf}
 \caption{ Actual LV VS OoEM's LV Adjusted Forecast}
-\label{fig:felix}
+
 \end{figure}
 \par So to sum up the aim of this thesis is to create a model for daily Low Voltage load demand, which is not available by OoEM but the analysts have to declare it nonetheless. The above described algorithm will be used in order to adjust OoEM's daily forecast for the whole network to the LV load forecast, as if OoEM provided on daily basis load demand forecast, and incorporate this information in the daily task of Low Voltage demand forecasting in our model's later.
 \subsection{Outliers-Missing Values}
@@ -714,38 +714,38 @@ Having in mind that the datasets are certified load demand data and moreover tha
 Sunday, 31 March 2019, 04:00:00 local daylight time instead. On the other hand, there is one day with 25 hours and 25 load demand values when the local daylight time was about to reach e.g Sunday, 27 October 2019, 04:00:00 clocks are turned backward 1 hour to Sunday, 27 October 2019, 03:00:00 local standard time instead. To deal with this situation, after communicatiing with an energy analyst, working for one of the biggest energy providers in Greece, we will fill the missing values with the previous' hour load demand and in the case of the extra hour, we will calculate the average load demand value for these two hours that the hour change occurs e.g in hour example, on 31 March we will take the average load demand of hours 3 and 4.
 \subsection{Summary Statistics \& Data Visualizations}
 Any data science problem, starts with the investigation of the available data to examine their properties and identify underlying correlations, so some exploratory data analysis was done on our dataset to this end. As we mentioned earlier, daily electricity load demand is greatly affected by seasonality, Holiday etc. In this task, our response variable is the LV e.g the load demand for load meters in hourly basis. In the following graphs, we will plot our response variable LV in order to identify interaction with time itself, as we are dealing here with time series, but also we will examine our variable of interest for any correlation with the rest of the explanatory variables. In the following graph, we can observe that Low Voltage load demand is a bit lower in Holiday, in contrary with normal days. This is fairly logical, because under the category of Low Voltage meters exist home meters, SME meters, office meters etc, so it is expected on Holiday when offices and SMEs are closed to expect lower load demand.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.75\linewidth]{project/eda1.pdf}
-\label{fig:felix}
+
 \caption{Low Voltage Load Demand vs Holiday}
 \end{figure}
 \par In the next graph, we plot the Low Voltage load demand based on the Weekday, e.g Monday, Tuesday...etc, in order to identify if and how the Weekday under examination affects the load demand. By observing the plot,we can infer that electric load demand is significantly lower during the Weekend because of reduced economic activity, as SMEs and offices are closed. Lower levels of demand are also observed on Mondays compared to the other "normal" - e.g non Holiday and non Weekend - days of the week, due to inertia caused by the reduced economic activity of Weekend.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.75\linewidth]{project/eda2.pdf}
-\label{fig:felix}
+
 \caption{Low Voltage Load Demand vs Weekday}
 \end{figure}
 Here we create a boxplot for our response variable and we can observe that Low Voltage load demand most of the times, or in other words in the 2nd and 3rd quantile is approximately between 2800 and 4500 KWh, but as we can see there are values below 2000 KWh and also outliers over 6500 KWh per hour.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.7\linewidth]{project/eda3.pdf}
-\label{fig:felix}
+
 \caption{Low Voltage Load Demand Boxplot}
 \end{figure}
 Electricity load demand presents fluctuations during the course of the day, based on daily human activity. Given that our dataset contains hourly electric load demand values, which show diurnal variation in electric load demand. In the next graph, we plotted the low voltage load demand on a random day and as we can see, the hourly variation during the 24 hour period is evident. More specifically, we can observe that the first load demand maximum value appears close to midday due to extensive use of electricity both for household activities (e.g cooking, heating etc) and businesses activities (office lighting, PC usage etc) during the working hours. The second load demand maximum is observed during the late afternoon and early evening hours and this is due to the extensive use of lighting and heating or cooling.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{project/eda4.pdf}
-\label{fig:felix}
+
 \caption{Daily Low Voltage Load Demand per Hour}
 \end{figure}
 \par In literature, there is a lot of discussion concerning electricity load demand and seasonality, thus we plotted the Low voltage load demand over one year time. More specifically, we used the actual LV load demand data of 2018 and plotted them over time. By looking at our graph, we can easily identify the strong seasonality appeared in the electric load demand behaviour, where there is observed higher load demand in winter in contrary with the summer. More specifically, we can observe higher electricity load demand in January, which thereafter gradually decreases until May. The above mentioned decrease in demand, moving towards the Spring as the weather gets warmer, coincides with a decrease in demand for heating.  As we move into the Summer, we observe a gradual increase in electricity demand, due to extensive use of air conditioners as the temperature gets higher and higher. This trend continues throughout the period of Summer till September, with the exception of August when a significant decrease in load demand is obvious. This decrease in August can be explained by the fact that the majority of people is on summer vacation during this month. A slight decrease in electricity load demand is also observed in October, which is representative of the transition from summer to winter, just before starting to gradually increase again in the following months to reach a maximum in December. The electricity load demand in December is higher than in January and February (which are Winter's coldest months), due to increased load demand during the festive Christmas period. 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=1\linewidth]{project/eda5.pdf}
-\label{fig:felix}
+
 \caption{2018 Low Voltage Load Demand (Historical Data)}
 \end{figure}
 \par So from our exploratory analysis we can conclude the following:
@@ -760,23 +760,22 @@ Electricity load demand presents fluctuations during the course of the day, base
 \newpage
 \section{SARIMAX Model}
 Fistly, we will apply the SARIMAX model and try to forecast Low Voltage load demand one day ahead, or in other words for the next 24 hours. As observed in the exploratory data analysis, there is trend and seasonality in our response variable and also our response variable is heavily affected by exogenous variables such Weekday, Holiday etc, so concerning ARIMA models, we will use the  Seasonal AutoRegressive Integrated Moving Average with eXogenous factor (SARIMAX (p, d, q)(P, D, Q, m)). To obtain the optimal order values, we used Python's \textit{auto arima()} \cite{autoarima} function with m=24, where m is the period for seasonal differencing and refers to the number of periods in each season, thus because we have hourly frequency in our time series we set it to 24. The auto arima function returned us the following optimal values for the SARIMAX orders as seen in the following figure.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.5\linewidth]{project/modelsum.PNG}
 \caption{SARIMAX optimal model summary}
-\label{fig:felix}
+
 \end{figure}
 After obtaining the optimal values (\textbf{SARIMAX(1,1,1)x(2,0,0,24)}) from the function we split the dataset into train and test set, where the test set is the dataset's last day or in other words the last 24 hours that we want to predict. Then we fit a SARIMAX model with the appropriate order values and the Holiday and Weekend variables as exogenous factors. After fitting the model we will make the predictions and in order to evaluate the model we will use the Root Mean Square Error metric.
 As said earlier, the object of this thesis is to create a model that we be more accurate than the OoEM's forecast model, thus every forecast will be compared with that forecast which is the value that we created earlier LVForecastEstimation. Again we should note that the LVForecastEstimation is the best case scenario, because OoEM does not know a-priori the proportion of Low Voltage in his daily total load forecasts. We were able to calculate this percentage based on historical data with one month lag as mentioned earlier. 
 In the following figure, we plotted our result to get a graphical representation of our model's accuracy where the blue line \textbf{LV}, is the dataset's actual LV load demand as calculated earlier, the green line \textbf{LVForecastEstimation} is the OoEM's forecast LV load demand as calculated earlier and the orange line \textbf{OurPrediction} is the SARIMAX model's predicted values.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{project/sarimax.pdf}
 \caption{SARIMAX LV load forecasts vs Actual load vs OoEM's load forecast}
-\label{fig:felix}
 \end{figure}
 \par By looking at the graph, we can conclude that our prediction is very decent, because as we can see the model follows very accurately the daily seasonality, although the OoEM's forecast is slightly better. In order to quantify the error, we will use the RMSE error as we said earlier and calculate our's prediction RMSE and the OoEM's prediction RMSE, as seen on the table below.
-\begin{table}[h!]
+\begin{table}[ht!]
 \centering
 \begin{tabular}{lllll}
 \cline{1-2}
@@ -801,23 +800,22 @@ In this section, we will use Facebook's Prophet algorithm to make a forecast on 
 \end{itemize}{}
 Last but not least, to improve even more the model's forecasting ability, we added two additional regressors concerning the type of day e.g whether the day under study is Holiday or not and the day of week respectively. As we saw in the EDA part, these two independent variables affect in a massive way load demand, so we decided to incorporate them in our model as well. Both of these independent variables values must be known a-priori both in the past and in the future. According to literature, adding more regressors is crucial concerning accurate forecasting in Prophet algorithm, as it's a way to tune the model and make the forecasting procedure more clear and user-friendly.
 \par To visualize individual forecast components, we used Prophet’s built-in plot\_components function: As we observe in the following component visualizations, Prophet was able to accurately model the underlying trend in the data, while also accurately modeling weekly,yearly and daily seasonality. The components plot consists of e sections: the trend, the extra regressors, and the seasonality. The sum of those components account for the entirety of the model in fact. The trend is simply what the data is showing if you subtract out all of the other components. The extra\_regressors plot shows the effect of all of the regressors (Weekday \& Holiday) included in the model. Additional regressors are like holidays in that they cause the trend to deviate from the baseline, except that the trend will stay changed after the event. The weekly seasonality component shows that load demand is constantly increasing throughout he week, but with a steep decline on the Monday. Moreover, the yearly and daily seasonality is quite wavy as can be observed in the plots. These plots are created with Fourier transforms, essentially stacked sine waves.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.7\linewidth]{project/download.pdf}
-\label{fig:felix}
+
 \caption{PROPHET's components}
 \end{figure}
 \newpage
 Last but not least, after generating the forecasts using the Prophet model for the same day as before in order to be able to compare, we plotted our predictions.
 In the following figure, we plotted our result to get a graphical representation of Prophet model's accuracy where the blue line \textbf{LV}, is the dataset's actual LV load demand, the green line \textbf{LVForecastEstimation} is the OoEM's forecast LV load demand as calculated earlier and the orange line \textbf{OurPrediction} is the Prophet model's predicted values. 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{project/prophet2.pdf}
-\label{fig:felix}
 \caption{PROPHET LV load forecasts vs Actual load vs OoEM's load forecast}
 \end{figure}
 By looking at the graph, we can clearly see that our prediction is not as good as before, and although the model seems to follow the daily seasonality the model is not accurate, and of course the OoEM's forecast is much better. Again to quantify the error, we will use the RMSE error as we said earlier and calculate our prediction's RMSE as seen on the table below.
-\begin{table}[h!]
+\begin{table}[ht!]
 \centering
 \begin{tabular}{lllll}
 \cline{1-2}
@@ -834,28 +832,26 @@ In this section, we are going to investigate Neural Networks and we will create 
 In other words, the multi-step neural network model needs to learn to predict a predict a sequence of values in the future, in contrary with a single-step neural network model, where only a single future point is predicted. The above mentioned framing of the problem is also known as a multi-step time series forecasting problem, given the multiple forecast steps and furthermore a model that uses multiple input variables is scientifically called a multivariate multi-step time series forecasting model, which this is our case-study in this experiment. For the multi-step model, after doing some experiments we chose the training data to consist of hourly load demand observations over the past fifteen days \cite{kong2017short}. Thus, we have to create a time window containing the most recent 288 (15x24) observations to train our neural network model. These time intervals from now on will be called windows, and there are the windows of time containing the appropriate data for the model to train on. The window \textit{past history} denotes the size of the past window of data observations, whereas the \textit{target size} denotes how far in the future the model need to learn to predict. Here according to the business rules, the model needs to learn to predict the load demand value for the next day. Since an obversation is recorded every hour, the output consists of 24 predictions e.g one for every hour of the day. 
 \par 
 As mentioned earlier, the dataset needs to be prepared accordingly before training, thus the first step is just to re-create it, but this time with the appropriate pre-specified \textit{past history} and \textit{target size}. Concerning the LSTM neural network architecture, we used Keras library \cite{keras} and after doing some experiments, we concluded in creating a sequential model with 4 Layers. The first and the second layer have 100 LSTM neurons each, whereas the third one has 50 neurons. The last layer, is a Dense layer and since 24 predictions are made (forecasting 24 hours in the future ), the dense layer has 24 neurons. 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.8\linewidth]{project/lstmsummary.PNG}
-\label{fig:felix}
 \caption{Multi-Variate \& Multi-Step LSTM Model Summary}
 \end{figure}
 The model was trained for 20 epochs with a batch size of 256 and concerning the loss function we used the Root Mean Square Error (RMSE) and the Adam optimiser also. The Adam optimization algorithm is described in literature as an extension of the stochastic gradient descent algorithm and recently has seen broader adoption in the scientific community concerning neural network applications.  Adam optimization algorithm or Adam optimizer is used in neural networks to update network weights in an iterative way based on the training data. In the next plot, we present our neural networks training and validation loss curves, that were extracted after finishing with the training of our model.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.7\linewidth]{project/tl.png}
-\label{fig:felix}
 \caption{LSTM Model's Train \& Validation Loss}
 \end{figure}
-\par To evaluate how well our neural network learnt to predict the future, a \textbf{rolling-forecast} scenario will be used, which is also technically described as walk-forward model validation. In simple words, each time step of the test dataset will be walked one observation at a time. More specifically, the proposed neural network model will make a forecast for a specific time step and then, after the forecast, the actual expected load demand value for the next time step of the test dataset will become available to the neural network in order to be incorporated in the forecast for the load demand value of the next time step, e.g the load demand value for the next hour. In other words, when the neural network model is required to make a 24 hour forecast in the future, then after the forecast, the actual load demand data for that 24 hour period is made available to the neural network model, in order to be used for making a forecast on the subsequent 24 hour period. The above described procedure is realistic concerning the way that the model will be used in practice and also beneficial, by allowing the neural network model to use the most recent available data. After making the forecasts and obtaining the predicted values, we have to invert the data transformations made earlier, in order to return the predicted load demand values back into their original scale. We can do this directly, using Python's \textit{MinMaxScaler} object that offers an inverse transformation functiοn (\textit{invert\_transformation()}). All collected forecasts made on the same test dataset and then we implemented an error score function - which used once again the RMSE metric - in order to summarize the model's forecasting skill (for each time step) and output an average of all the prediction errors. 
-\par Furthermore, in the following figure, we plotted our result to get a graphical representation of our model's accuracy where the blue line is the \textbf{past history}, e.g the dataset's actual LV load demand for the declared history size window -in our case 15 days of previous observations-, the green line is the \textbf{true future}, the current actual LV load demand for the specified target size e.g how far in the future does the model need to learn to predict. Last but not least, the red line \textbf{Predicted Future} is the predicted values forecasted by the LSTM Neural Network for the specified target window size e.g 24 hours in the future based on the specified past history window size e.g using 15 days history data to make the prediction \cite{tensor}. By looking at the graph, we can clearly see that our prediction is again worse than before, and although the model seems to recognise the hourly seasonality -as it is denoted by the spikes and the ups and downs in the graph- but the model is not accurate enough. To quantify the error, we will use the RMSE error as we said earlier and calculate our prediction's RMSE as seen on the table below. As we can see once again, the OoEM's forecast is still better.
-\begin{figure}[h!]
+\par To evaluate how well our neural network learnt to predict the future, a \textbf{rolling-forecast} scenario will be used, which is also technically described as walk-forward model validation. In simple words, each time step of the test dataset will be walked one observation at a time. More specifically, the proposed neural network model will make a forecast for a specific time step and then, after the forecast, the actual expected load demand value for the next time step of the test dataset will become available to the neural network in order to be incorporated in the forecast for the load demand value of the next time step, e.g the load demand value for the next hour. In other words, when the neural network model is required to make a 24 hour forecast in the future, then after the forecast, the actual load demand data for that 24 hour period is made available to the neural network model, in order to be used for making a forecast on the subsequent 24 hour period. The above described procedure is realistic concerning the way that the model will be used in practice and also beneficial, by allowing the neural network model to use the most recent available data. After making the forecasts and obtaining the predicted values, we have to invert the data transformations made earlier, in order to return the predicted load demand values back into their original scale. We can do this directly, using Python's \textit{MinMaxScaler} object that offers an inverse transformation function (\textit{invert\_transformation()} ). All collected forecasts made on the same test dataset and then we implemented an error score function - which used once again the RMSE metric - in order to summarize the model's forecasting skill (for each time step) and output an average of all the prediction errors. 
+\par Furthermore, in the following figure, we plotted our result to get a graphical representation of our model's accuracy where the blue line is the \textbf{past history}, e.g the dataset's actual LV load demand for the declared history size window -in our case 15 days of previous observations-, the green line is the \textbf{true future}, the current actual LV load demand for the specified target size e.g how far in the future does the model need to learn to predict. Last but not least, the red line \textbf{Predicted Future} is the predicted values forecasted by the LSTM Neural Network for the specified target window size e.g 24 hours in the future based on the specified past history window size e.g using 15 days history data to make the prediction \cite{tensor}. 
+By looking at the graph, we can clearly see that our prediction is again worse than before, and although the model seems to recognise the hourly seasonality -as it is denoted by the spikes and the ups and downs in the graph- but the model is not accurate enough. To quantify the error, we will use the RMSE error as we said earlier and calculate our prediction's RMSE as seen on the table below. As we can see once again, the OoEM's forecast is still better.
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.9\linewidth]{project/nn.PNG}
-\label{fig:felix}
 \caption{LSTM model's load forecasts vs Actual Load}
 \end{figure}
-\begin{table}[h!]
+\begin{table}[ht!]
 \centering
 \begin{tabular}{lllll}
 \cline{1-2}
@@ -867,19 +863,19 @@ The model was trained for 20 epochs with a batch size of 256 and concerning the 
 \end{table}
 \newpage
 \section{Time Series as a Regression Problem}
-As we mentioned earlier, in literature there are numerous publications concerning Electricity Load Demand Forecasting, which state that this forecasting problem should be approached as a regression problem and as confirmed in the EDA section, there are numerous exogenous factors that affect load demand and also it's affected greatly by seasonality. Thus in this section, we will try to approach this problem as a regression problem, we will apply some of the state-of-the art algorithms and evaluate their performance. To do that first of all, we have to make some transformation in our dataset. First of all we will create four more columns, which will denote the Day, Hour, Month and Year of the observation respectively. Moreover as we saw, earlier the LV load demand presents apart from great seasonality, indicates autocorrelation also \cite{vanderplas2016python}. \textbf{Αutocorrelation} metric is used to measures the linear relationship between lagged values of a time series, just as correlation metric used to estimate the extent of linear relationship between two variables, by identifying and measuring their interaction. In other words, autocorrelation phenomenon occurs when time-series is linearly related to a lagged version of itself.
+As we mentioned earlier, in literature there are numerous publications concerning Electricity Load Demand Forecasting, which state that this forecasting problem should be approached as a regression problem and as confirmed in the EDA section, there are numerous exogenous factors that affect load demand and also it's affected greatly by seasonality. Thus in this section, we will try to approach this problem as a regression problem, we will apply some of the state-of-the art algorithms and evaluate their performance. To do that first of all, we have to make some transformation in our dataset. First of all we will create four more columns, which will denote the Day, Hour, Month and Year of the observation respectively. Moreover as we saw, earlier the LV load demand presents apart from great seasonality, indicates autocorrelation also \cite{vanderplas2016python}. \textbf{Autocorrelation} metric is used to measures the linear relationship between lagged values of a time series, just as correlation metric used to estimate the extent of linear relationship between two variables, by identifying and measuring their interaction. In other words, autocorrelation phenomenon occurs when time-series is linearly related to a lagged version of itself.
 \par The estimation of this linear relationship between lagged values is realized by the \textbf{Autocorrelation coefficients}, as shown in the following formula. More specifically, $r_{1}$ measures the linear relationship between lagged values $y_{t}$ and $y_{t-1}$, $r_{2}$ measures the linear relationship between lagged values $y_{t}$ and $y_{t-2}$ and so on and so forth. The value of $r_{k}$ can be formulated as
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.6\linewidth]{project/rk.PNG}
-\label{fig:felix}
+
 \end{figure}
 where T is the time series length. When time-series have trend, the autocorrelation value for small lag intervals tend to be large and positive, because nearby observations in terms of lag intervals, tend to be similar in size and small discrepancies are observed. Autocorrelation plots of time-series which have trend, present large positive autocorrelation values that slowly decrease as the lags time intervals gets bigger. 
 On the other hand, when seasonality is observed in the time-series, autocorrelations will be larger for the seasonal lag intervals (multiples of the seasonal frequency). In cases such electric load curve when data present both trend and seasonality, a combination of these effects is observeved as shown in the following plot. In the next graph, we present the autocorrelation plot of our response variable, e.g the LV load demand. 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.6\linewidth]{project/ac.pdf}
-\label{fig:felix}
+
 \caption{Auto-correlation plot over 24 hour period}
 \end{figure}
 \par The autocorrelation plot below shows the extent to which the demand variable correlates with itself at different intervals (lags). This plot shows that demand is highly autocorrelated over the closest 6 hour period. To incorporate this information in our dataset, we created a function to generate for each observation in the dataset, the LV load demand value for closest 6 lags. Thus now our dataset contains the following columns, 
@@ -899,7 +895,7 @@ On the other hand, when seasonality is observed in the time-series, autocorrelat
 \end{itemize}
 as shown in the picture below.
 
-\begin{table}[h!]
+\begin{table}[ht!]
 \scalebox{0.7}{ 
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
@@ -939,13 +935,13 @@ as shown in the picture below.
     \item \textbf{reg\_lambda: 0.9}
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{project/final4.pdf}
-\label{fig:felix}
+
 \caption{LightGBM LV load forecasts vs Actual load vs OoEM’s load forecast}
 \end{figure}
-\begin{table}[h!]
+\begin{table}[ht!]
 \centering
 \begin{tabular}{lllll}
 \cline{1-2}
@@ -956,20 +952,20 @@ as shown in the picture below.
 \end{tabular}
 \end{table}
 \par As we can see in the provided graph our model generated great forecasts and even surpassed OoEM's forecast. Moreover, we used the RMSE error to quantify our results and we obtained a forecast with RMSE equal to 41.86 in contrary with OoEM's forecast which has an error of 123.23. Last but not least, to be even more confident about our model's general forecasting ability and also ensure that the above results were not random, we ran one more experiment as we tried to predict a whole month and more specifically the Semptember of 2019. Again we perform the same procedure, as we split the dataset in train and test sets and used the LightGBM model constructed above. Below we can see our results concerning the forecasting of one whole month. In the first figure, with the blue line are represented the actual Low Voltage load demand for September, where on the other hand with the orange line we present the evaluation criterion, or in other words OoEM's adjusted Low Voltage forecast.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{project/1.pdf}
 \caption{Actual LV load demand vs OoEM’s LV load forecast}
-\label{fig:felix}
+
 \end{figure}
 In the second graph, with the blue line again we present the actual Low Voltage load demand for September, where on the other hand with the orange line we present our model's prediction for the Low Voltage load demand during September. By just looking at the two graphs, it's easy too understand that our model again performed better again and we quantified the error's again using RMSE which is our evaluation metric. The results are presented in the following table, where OoEM's forecast deviation where measured with an RMSE error of 88.14, where on the other hand our model generated an RMSE error of 55.73, thus outperforming OoEM's forecasts.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{project/2.pdf}
 \caption{Actual LV load demand vs LightGBM model's LV load forecast}
-\label{fig:felix}
+
 \end{figure}
-\begin{table}[h!]
+\begin{table}[ht!]
 \centering
 \begin{tabular}{lllll}
 \cline{1-2}
@@ -980,21 +976,21 @@ In the second graph, with the blue line again we present the actual Low Voltage 
 \end{tabular}
 \end{table}
 Last but not least, to enhance our conclusion visually with greater detail, we provided graphs that visualize the forecast of three random days in September as forecasted by our models. In the following graphs, we present with the blue line the actual Low Voltage load demand, with the green line the OoEM's Low Voltage adjusted forecast and with the orange line, we present our model's forecasts. 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{project/last1.pdf}
-\label{fig:felix}
+
 \caption{LightGBM LV load forecasts vs Actual load vs OoEM’s load forecast}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{project/last2.pdf}
-\label{fig:felix}
+
 \caption{LightGBM LV load forecasts vs Actual load vs OoEM’s load forecast}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=1\linewidth]{project/last3.pdf}
-\label{fig:felix}
+
 \caption{LightGBM LV load forecasts vs Actual load vs OoEM’s load forecast}
 \end{figure}
